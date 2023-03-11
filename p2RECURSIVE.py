@@ -17,3 +17,6 @@ def rec_grayCode(n):
 
 
 print(rec_grayCode(3))
+array =(rec_grayCode(3))
+for i in array:
+  print(i) 
