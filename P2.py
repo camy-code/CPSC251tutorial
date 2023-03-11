@@ -36,6 +36,8 @@ def generateGrayarr(n):
         # Nor arr[] has double number of codes.
         for j in range(i - 1, -1, -1):
             arr.append(arr[j])
+            print(arr)
+            # The above code grabs the letthand bits that we need to copy over
  
         # append 0 to the first half
         for j in range(i):
@@ -44,6 +46,7 @@ def generateGrayarr(n):
         # append 1 to the second half
         for j in range(i, 2 * i):
             arr[j] = "1" + arr[j]
+
         i = (i << 1) # This is effectively multiplying by 2. 
         # The << is a logical shift left so if we have the bit string 1111.
         #  When we LSL that string we get 1110.
@@ -57,4 +60,4 @@ def generateGrayarr(n):
         print(arr[i])
  
 # Driver Code
-generateGrayarr(3)
+generateGrayarr(2)
