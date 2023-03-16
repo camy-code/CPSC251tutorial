@@ -1,5 +1,5 @@
 def permut(array):
-    if len(array) == 1:
+    if len(array) == 1: # Can also go with len(array) == 0 and returning empty array
         return [array]
     res = []
     for permutation in permut(array[1:]):
@@ -7,12 +7,8 @@ def permut(array):
             res.append(permutation[:i] + array[0:1] + permutation[i:])
     return res
 
-arr =permut([1,2,3])
+print(permut([1,2,3]))
 
-
-# This is just where I print the array!
-for i in arr:
-  print(i)
 
 # I got this from stackoverflow
 # link: https://stackoverflow.com/questions/13109274/python-recursion-permutations
